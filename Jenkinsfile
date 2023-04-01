@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pulling Code') {
             steps {
-                git url: 'https://github.com/ANILPHUGARE1/node-todo-cicd.git', branch: 'master' 
+                git credentialsId: 'Git_credential', url: 'https://github.com/ANILPHUGARE1/node-todo-cicd.git' 
 
             }
         }
