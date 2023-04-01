@@ -28,5 +28,11 @@ pipeline {
                 sh "docker-compose down && docker-compose up -d"
             }
         }
+        stage('APPLICATION RUNNING'){
+            steps{
+                sh "docker run -id --name nodeapp4 anilphugare1/nodejs4:v1 "
+            }
+        }
+             
     }
 }
