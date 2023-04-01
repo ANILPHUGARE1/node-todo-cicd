@@ -11,7 +11,7 @@ pipeline {
         stage('Build Images') {
             steps {
                
-                sh 'docker build . -t anilphugare1/nodejs3:v1'
+                sh 'docker build . -t anilphugare1/nodejs4:v1'
             }
         }
         
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub_password', passwordVariable: 'docker_password', usernameVariable: 'dockerhub_username')]) {
                     sh "docker login -u ${env.dockerhub_username} -p ${env.docker_password}"
-                    sh 'docker push anilphugare1/nodejs3:v1'
+                    sh 'docker push anilphugare1/nodejs4:v1'
                 }
             }
         }
