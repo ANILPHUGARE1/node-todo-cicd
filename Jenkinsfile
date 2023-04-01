@@ -11,7 +11,7 @@ pipeline {
         stage('Build Images') {
             steps {
                
-                sh 'docker build -t anilphugare1/nodejs3:v1 .'
+                sh 'docker build . -t anilphugare1/nodejs3:v1'
             }
         }
         
